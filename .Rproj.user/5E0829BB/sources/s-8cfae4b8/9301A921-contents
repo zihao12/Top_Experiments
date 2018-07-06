@@ -2,7 +2,7 @@
 title: "Topic Model for Pure Membership Data with No Anchor Words"
 author: "Zihao Wang"
 date: "7/5/2018"
-output: html_document
+output: pdf_document
 ---
 
 ```{r}
