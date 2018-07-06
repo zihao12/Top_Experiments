@@ -1,0 +1,54 @@
+---
+title: "Topic Model for Pure Membership Data with No Anchor Words"
+author: "Zihao Wang"
+date: "7/5/2018"
+output: html_document
+---
+
+```{r}
+library(CountClust)
+library(maptpx)
+library(classtpx)
+library(radmixture)
+set.seed(12345)
+```
+
+```{r}
+X_K5 = read.csv("../Top_data/countX_K5.csv", header = FALSE, sep = ",")
+Pi_K5 = read.csv("../Top_data/Pi_K5.csv", header = FALSE, sep = ",")
+A_K5 = read.csv("../Top_data/topA_K5.csv", header = FALSE, sep = ",")
+X_K5 = as.matrix(X_K5)
+Pi_K5 = as.matrix(Pi_K5)
+A_K5 = as.matrix(A_K5)
+zero_row = which(rowSums(X_K5) == 0)
+
+```
+
+## run the data on topics() and compute loglikelihood
+```{r}
+fit.map = topics(X_K5,K = 5)
+theta1 = t(fit.map$theta)
+omega1 = fit.map$omega
+fitted_probs1 <- omega1%*%theta1
+loglik1 <- sum(Pi_K5[-zero_row,]*log(fitted_probs1))
+loglik1
+square_loss = norm((Pi_K5[-zero_row,] - fitted_probs1),"F")
+square_loss
+```
+
+
+## Continue Topic algo:Use A and X to compute W
+```{r}
+
+
+```
+
+
+
+
+
+
+
+
+
+
