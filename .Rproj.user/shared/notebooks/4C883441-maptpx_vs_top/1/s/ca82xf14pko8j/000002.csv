@@ -1,7 +1,0 @@
-"0","X_K5 = read.csv(""../Top_data/countX_K5.csv"", header = FALSE, sep = "","")"
-"0","Pi_K5 = read.csv(""../Top_data/Pi_K5.csv"", header = FALSE, sep = "","")"
-"0","A_K5 = read.csv(""../Top_data/topA_K5.csv"", header = FALSE, sep = "","")"
-"0","X_K5 = as.matrix(X_K5)"
-"0","Pi_K5 = as.matrix(Pi_K5)"
-"0","A_K5 = as.matrix(A_K5)"
-"0","zero_row = which(rowSums(X_K5) == 0)"

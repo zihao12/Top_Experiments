@@ -1,8 +1,0 @@
-"0","W <- classtpx::class_topics("
-"0","  X_K5,"
-"0","  K = dim(A_K5)[2],"
-"0","  known_samples = A_K5,"
-"0","  class_labs = A_K5,"
-"0","  method = ""omega.fix"","
-"0","  tol = 0.01"
-"0",")"
