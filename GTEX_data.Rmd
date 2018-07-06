@@ -1,0 +1,22 @@
+---
+title: "Try GTex Data"
+author: "Zihao_Wang"
+date: "7/3/2018"
+output: html_document
+---
+
+```{r}
+rm(list=ls())
+library(data.table)
+library(maptpx)
+library(CountClust)
+```
+
+
+```{r}
+data <- data.frame(fread('../data/cis_gene_expression.txt'))
+## the first two columns are some labels ??
+matdata <- data[,-(1:2)]
+sample_id = read.table("../data/samples_id.txt")[,3]
+```
+
